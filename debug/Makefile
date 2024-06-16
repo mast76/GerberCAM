@@ -13,7 +13,6 @@ EQ            = =
 first: debug
 install: debug-install
 uninstall: debug-uninstall
-MSYSTEM       = python.ex
 QMAKE         = $(QT_ROOT_DIR)\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist

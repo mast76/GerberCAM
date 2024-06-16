@@ -32,5 +32,5 @@ jobs:
     - name: make
       run: |
         pushd debug
-        mingw32-make.exe
+        mingw32-make.exe SHELL=cmd
         popd
