@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "master" ]
 
+defaults:
+  run:
+    shell: pwsh
+
 jobs:
   build:
 
@@ -22,9 +26,11 @@ jobs:
         target: 'desktop'
         arch: 'win32_mingw81'
         dir: '${{ github.workspace }}/qt/'
-        install-deps: 'true'
         modules: ''
         tools: 'tools_mingw qt.tools.win32_mingw810'
         set-env: 'true'
     - name: make
-      run: mingw32-make.exe
+      run: |
+        pushd debug
+        mingw32-make.exe
+        popd
