@@ -27,7 +27,7 @@ jobs:
         arch: 'win32_mingw81'
         dir: '${{ github.workspace }}/qt/'
         modules: ''
-        tools: 'qt.tools.win32_mingw810'
+        tools: 'tools_mingw,qt.tools.win32_mingw810'
         set-env: 'true'
     - name: make
       run: |
